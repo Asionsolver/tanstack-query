@@ -1,7 +1,4 @@
----
-id: installation
-title: Installation
----
+# Installation & Devtools
 
 You can install React Query via [NPM](https://npmjs.com/),
 or a good ol' `<script>` via
