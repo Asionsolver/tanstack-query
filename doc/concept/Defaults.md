@@ -153,7 +153,7 @@ If you want these triggers to **always** work, even if the data is **Fresh**, yo
 
 - `refetchOnWindowFocus: "always"` (whether the data is stale or not, it will refetch when the tab is focused).
 
-## Garbage Collection বা gcTime (Clearing memory)
+## Garbage Collection Or gcTime (Clearing memory)
 
 **gcTime (Garbage Collection Time)** The easiest way to understand it is that it controls the **"life span"** of memory or cache.
 
