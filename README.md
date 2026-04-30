@@ -10,3 +10,4 @@
 
 - **[Default Behavior](./doc/concept/Defaults.md)**
 - **[Queries](./doc/concept/Queries.md)**
+- **[Query Keys](./doc/concept/QueryKeys.md)**
