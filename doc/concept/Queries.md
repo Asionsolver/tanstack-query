@@ -9,7 +9,7 @@ The documentation uses a nice term: **"Declarative Dependency"**.
 
 ---
 
-### 2. The two main components of `useQuery`
+### The two main components of `useQuery`
 
 Subscribing to a query requires at least two things:
 
@@ -18,7 +18,7 @@ Subscribing to a query requires at least two things:
 
 ---
 
-## ৩. Status (Data status)
+## Status (Data status)
 
 When a query runs, it is in one of 3 main states. This tells us what state the **data** is in:
 
@@ -28,7 +28,7 @@ When a query runs, it is in one of 3 main states. This tells us what state the *
 
 ---
 
-## 4. FetchStatus (function status) — This is very important!
+## FetchStatus (function status) — This is very important!
 
 -**`status`** says: **Is there **"data"\*\* ? (Success/Pending/Error)
 
@@ -49,7 +49,7 @@ In real-life applications, many scenarios arise where data is present (Success),
 
 ---
 
-## 5. A complete example and state handling
+## A complete example and state handling
 
 ```jsx
 function MyTodos() {
@@ -92,13 +92,13 @@ function MyTodos() {
 
 ---
 
-## 6. Why do we need `isFetching` separately?
+## Why do we need `isFetching` separately?
 
 Suppose, you have loaded the Facebook home page once. Now, you come back to the home page after 5 minutes.
 TanStack Query will show you the **old data** instantly (so your screen doesn't stay blank). At this point, `status` will be `success` (because data is available).
 But it will keep checking for new posts in the background. Then `isFetching` will be `true`. The user won't know that work is going on behind the scenes until the new data arrives and replaces the old data. This is known as the **"Stale-while-revalidate"** logic.
 
-### 7. TypeScript Benefits
+### TypeScript Benefits
 
 If you are using TypeScript, TanStack Query provides excellent type checking.
 

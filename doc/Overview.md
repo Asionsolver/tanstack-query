@@ -23,35 +23,35 @@
 
 - Example: Suppose you are building an e-commerce site. How many products are in the user's shopping cart is 'Client State', but how much stock of the product is 'Server State'. Because the stock can be reduced at any time by another buyer.
 
-### 2. Data "Out of Date" or Stale
+### Data "Out of Date" or Stale
 
 > Explanation: Data starts to become outdated the moment it is fetched from the server.
 
 - Example: You see a Facebook post with a like count of 100. But while you are looking at it, 10 more people have liked it. The data in your browser is now 'out of date'. TanStack Query automatically checks and updates this data in the background.
 
-### 3. Caching
+### Caching
 
 > Explanation: Once the data is fetched, it is stored in memory so that it does not have to send repeated requests to the server.
 
 - Example: You go from the 'Home' page to the 'Profile' page, and then come back to the 'Home' page. TanStack Query will show you the previously fetched data immediately and check in the background for new data. This avoids the user seeing the loading spinner.Explanation: Once the data is fetched, it is stored in memory so that it does not have to send repeated requests to the server.
 
-### 4. Deduping multiple requests
+### Deduping multiple requests
 
 > Explanation: If three different components on a page call the same API at the same time, TanStack Query will send only one request instead of three.
 
 - Example: In a dashboard, the "User Profile" component is in three places—the header, the sidebar, and the main content. Although the code is supposed to fetch it 3 times, TanStack Query cleverly fetches the data only once and distributes it across three places.
 
-### 5. Pagination and Lazy Loading
+### Pagination and Lazy Loading
 
 > Explanation: When there is a lot of data, it is better to break it up into smaller chunks rather than bringing it all together.
 
 - Example: When you scroll down on Facebook, new posts load at the bottom (Infinite Scroll), this complex logic can be done very easily with TanStack Query's useInfiniteQuery.
 
-### 6. Structural Sharing
+### Structural Sharing
 
 > Explanation: This is an advanced technique. If new data comes from the server but it turns out that the data has not actually changed, it keeps the old reference in memory. As a result, the React component does not need to be 're-rendered' unnecessarily. This increases the performance of the app many times over. In simple terms, **when new data comes from the server, instead of changing the entire data, only the part that has changed and keeping the reference to the rest of the previous data is called structural sharing.**
 
-### 7. Removing complicated code
+### Removing complicated code
 
 > Previously, we used to fetch data using `useEffect`, `useState` (for loading, error, data), which would have become very large.
 

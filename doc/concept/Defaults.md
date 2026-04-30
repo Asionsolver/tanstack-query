@@ -215,7 +215,7 @@ If your app has sensitive data (e.g. bank balance or password), which you want t
 
 ### **Automatic Retries** is a "Resilience" feature of TanStack Query. It protects your app from minor internet issues or temporary server downtime.
 
-### ১. The Default Behavior
+### 1. The Default Behavior
 
 When an API request fails, TanStack Query does not immediately show the user an "Error". He thinks that maybe there is a problem with the internet, and that it will be fixed if he tries again.
 
